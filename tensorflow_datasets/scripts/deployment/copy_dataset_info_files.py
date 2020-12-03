@@ -50,7 +50,7 @@ def _copy_metadata(from_dir, to_dir):
       tf.io.gfile.copy(from_path, to_path, overwrite=True)
 
 
-def copy(from_dir: str, to_dir: str) -> None:
+def copy(from_dir: tfds.core.PathLike, to_dir: tfds.core.PathLike) -> None:
   """Copy the info files from within `from_dir` to `to_dir`."""
   predicate_fn = lambda _: True  # All datasets
 
